@@ -57,6 +57,22 @@ const experience = [
     ],
   },
   {
+    title: "Computer Technician",
+    company: "OnSpot Appliance Repair LLC",
+    location: "Dumfries, VA",
+    period: "January 2024 – August 2024",
+    icon: Cpu,
+    points: [
+      "Installed, maintained, and troubleshot computer hardware, software, and network systems in a small business service environment.",
+      "Provided day-to-day technical support to users and resolved software, hardware, connectivity, and workstation issues.",
+      "Configured operating systems, business applications, and security software across supported devices.",
+      "Set up and maintained small office network infrastructure including routers, switches, and firewall-connected environments.",
+      "Supported internal operations through practical troubleshooting, system upkeep, and process-oriented technical assistance.",
+   
+    ],
+  },
+  {
+    
     title: "Field Engineer I",
     company: "Sytech Corporation",
     location: "Alexandria, VA",
@@ -69,20 +85,6 @@ const experience = [
       "Configured network devices and administered domains, user accounts, permissions, and device access controls.",
       "Supported network security and monitoring operations while assisting with specialized communications and data handling environments.",
       "Helped maintain reliable technical operations through hands-on troubleshooting, device configuration, and infrastructure support.",
-    ],
-  },
-  {
-    title: "Computer Technician",
-    company: "OnSpot Appliance Repair LLC",
-    location: "Dumfries, VA",
-    period: "January 2024 – August 2024",
-    icon: Cpu,
-    points: [
-      "Installed, maintained, and troubleshot computer hardware, software, and network systems in a small business service environment.",
-      "Provided day-to-day technical support to users and resolved software, hardware, connectivity, and workstation issues.",
-      "Configured operating systems, business applications, and security software across supported devices.",
-      "Set up and maintained small office network infrastructure including routers, switches, and firewall-connected environments.",
-      "Supported internal operations through practical troubleshooting, system upkeep, and process-oriented technical assistance.",
     ],
   },
 ];
@@ -374,7 +376,7 @@ export default function ResumeWebsite() {
             <h2 className="text-3xl font-semibold">Career timeline</h2>
           </motion.div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-2">
+          <div className="mt-10 space-y-6">
             {experience.map((job) => {
               const Icon = job.icon;
               return (
