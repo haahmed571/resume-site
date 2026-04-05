@@ -27,7 +27,7 @@ const fadeUp = {
 const experience = [
   {
     title: "AWS Network Deployment Technician",
-    company: "Amazon Web Services",
+company: "TEKsystems · Contract @ Amazon Web Services",
     period: "April 2026 – Present",
     icon: Network,
     points: [
