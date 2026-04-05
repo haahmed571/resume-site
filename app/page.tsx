@@ -360,63 +360,68 @@ export default function ResumeWebsite() {
           </div>
         </section>
 
-        <section
-          id="experience"
-          className="mx-auto max-w-7xl px-6 py-16 lg:px-10"
+       <section
+  id="experience"
+  className="mx-auto max-w-7xl px-6 py-16 lg:px-10"
+>
+  <motion.div
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.15 }}
+    variants={fadeUp}
+  >
+    <p className="mb-3 text-sm uppercase tracking-[0.35em] text-cyan-300">
+      Experience
+    </p>
+    <h2 className="text-3xl font-semibold">Career timeline</h2>
+  </motion.div>
+
+  <div className="relative mt-12 border-l border-white/10 pl-8 md:pl-10 space-y-10">
+    {experience.map((job) => {
+      const Icon = job.icon;
+      return (
+        <motion.div
+          key={job.title + job.company}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          variants={fadeUp}
+          className="relative"
         >
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.15 }}
-            variants={fadeUp}
-          >
-            <p className="mb-3 text-sm uppercase tracking-[0.35em] text-cyan-300">
-              Experience
-            </p>
-            <h2 className="text-3xl font-semibold">Career timeline</h2>
-          </motion.div>
-
-          <div className="mt-10 space-y-6">
-            {experience.map((job) => {
-              const Icon = job.icon;
-              return (
-                <motion.div
-                  key={job.title + job.company}
-                  initial="hidden"
-                  whileInView="show"
-                  viewport={{ once: true, amount: 0.15 }}
-                  variants={fadeUp}
-                  className="group rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-xl transition hover:border-cyan-400/30 hover:bg-white/[0.07]"
-                >
-                  <div>
-                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
-                      <Icon className="h-6 w-6 text-cyan-300" />
-                    </div>
-                    <p className="text-sm uppercase tracking-[0.25em] text-white/45">
-                      {job.period}
-                    </p>
-                    <h3 className="mt-3 text-xl font-semibold">{job.title}</h3>
-                    <p className="mt-1 text-white/65">
-                      {job.company}
-                      {job.location ? ` · ${job.location}` : ""}
-                    </p>
-                  </div>
-
-                  <ul className="mt-5 space-y-3 pt-1 text-white/72">
-                    {job.points.map((point) => (
-                      <li
-                        key={point}
-                        className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3"
-                      >
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                </motion.div>
-              );
-            })}
+          <div className="absolute -left-[42px] top-2 flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/30 bg-[#08101f] shadow-lg shadow-cyan-500/10">
+            <Icon className="h-5 w-5 text-cyan-300" />
           </div>
-        </section>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-6 md:p-8 backdrop-blur-xl transition hover:border-cyan-400/30 hover:bg-white/[0.07]">
+            <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
+              <div>
+                <p className="text-xs uppercase tracking-[0.28em] text-white/45">
+                  {job.period}
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold">{job.title}</h3>
+                <p className="mt-2 text-white/65">
+                  {job.company}
+                  {job.location ? ` · ${job.location}` : ""}
+                </p>
+              </div>
+
+              <ul className="space-y-3 text-white/75">
+                {job.points.map((point) => (
+                  <li
+                    key={point}
+                    className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 leading-7"
+                  >
+                    {point}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+      );
+    })}
+  </div>
+</section>
 
         <section
           id="projects"
