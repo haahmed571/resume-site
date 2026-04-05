@@ -27,46 +27,62 @@ const fadeUp = {
 const experience = [
   {
     title: "AWS Network Deployment Technician",
-company: "TEKsystems · Contract @ Amazon Web Services",
+    company: "TEKsystems · Contract @ Amazon Web Services",
+    location: "Northern Virginia",
     period: "April 2026 – Present",
     icon: Network,
     points: [
-      "Deploy, label, and test switches, routers, optics, and structured cabling in data center environments.",
-      "Rack and stack hardware, validate fiber paths, replace failed components, and perform hardware diagnostics.",
-      "Bring network devices online, verify VLANs, routing adjacencies, and support circuit turn-ups.",
-      "Troubleshoot Layer 1 to Layer 3 issues using an OSI-based approach with remote engineering teams.",
-      "Maintain deployment records, port maps, diagrams, inventory accuracy, and operational compliance.",
+      "Deploy, label, install, and test network hardware including switches, routers, optics, patch panels, and structured cabling in AWS data center environments.",
+      "Perform rack and stack operations, hardware replacements, fiber validation, connector cleaning, and physical-layer troubleshooting during deployment and break-fix workflows.",
+      "Support network bring-up by verifying connectivity, VLAN assignments, routing adjacencies, interface status, and circuit turn-up readiness.",
+      "Troubleshoot Layer 1 through Layer 3 issues including link failures, bad optics, patching faults, misconfigured ports, and hardware-related connectivity problems.",
+      "Work with remote network engineering teams to resolve escalated deployment and infrastructure issues in production and pre-production environments.",
+      "Maintain accurate deployment records, port maps, asset tracking, and operational documentation in alignment with AWS standards and procedures.",
     ],
   },
   {
     title: "Network & Telecommunication Technician",
     company: "Guest Services",
+    location: "Fairfax, VA",
     period: "August 2024 – March 2026",
     icon: Server,
     points: [
-      "Supported WAN, LAN, wireless, voice, and endpoint infrastructure across multiple locations.",
-      "Resolved outages, repaired network equipment, and maintained telecom systems and technical records.",
-      "Handled onsite and remote troubleshooting for computers, peripherals, and mobile devices.",
+      "Configured and deployed WAN, LAN, voice, and wireless networks including routers, firewalls, switches, access points, and telephony systems to support business operations.",
+      "Monitored, diagnosed, and resolved network equipment issues while performing repairs, upgrades, and preventive maintenance to maintain service reliability.",
+      "Administered telephone systems including new hire extensions, voicemail setup, troubleshooting, and system upgrades based on organizational needs.",
+      "Sourced, procured, and audited internet and voice services across multiple locations while maintaining records and helping prevent service and billing losses.",
+      "Maintained detailed documentation of network configurations, mappings, service records, provider information, and operational procedures.",
+      "Collaborated with service providers to resolve outages and technical issues related to internet, telephony, and network services in a timely manner.",
+      "Provided remote and onsite support for desktops, peripherals, and mobile devices, including iOS and Android troubleshooting.",
     ],
   },
   {
     title: "Field Engineer I",
     company: "Sytech Corporation",
+    location: "Alexandria, VA",
     period: "June 2023 – January 2024",
     icon: Wrench,
     points: [
-      "Installed and supported routers, switches, firewalls, VPNs, and user environments.",
-      "Managed system access, device configuration, and secure technical operations.",
+      "Installed, maintained, and troubleshot computer hardware, software, and network systems in field and operational environments.",
+      "Provided technical support to end users by resolving software issues, hardware faults, and application-related problems.",
+      "Set up and managed network infrastructure including routers, switches, firewalls, and VPN connections to support secure connectivity.",
+      "Configured network devices and administered domains, user accounts, permissions, and device access controls.",
+      "Supported network security and monitoring operations while assisting with specialized communications and data handling environments.",
+      "Helped maintain reliable technical operations through hands-on troubleshooting, device configuration, and infrastructure support.",
     ],
   },
   {
     title: "Computer Technician",
     company: "OnSpot Appliance Repair LLC",
+    location: "Dumfries, VA",
     period: "January 2024 – August 2024",
     icon: Cpu,
     points: [
-      "Maintained business systems, supported users, and handled hardware, software, and network troubleshooting.",
-      "Improved operations through practical automation and internal tooling.",
+      "Installed, maintained, and troubleshot computer hardware, software, and network systems in a small business service environment.",
+      "Provided day-to-day technical support to users and resolved software, hardware, connectivity, and workstation issues.",
+      "Configured operating systems, business applications, and security software across supported devices.",
+      "Set up and maintained small office network infrastructure including routers, switches, and firewall-connected environments.",
+      "Supported internal operations through practical troubleshooting, system upkeep, and process-oriented technical assistance.",
     ],
   },
 ];
@@ -90,22 +106,30 @@ const projects = [
 ];
 
 const skills = [
-  "Network Deployment",
-  "OSI Troubleshooting",
+  "AWS Network Deployment",
+  "Data Center Operations",
+  "Layer 1–3 Troubleshooting",
+  "WAN / LAN Networking",
   "Switches & Routers",
   "Fiber Optics",
+  "Rack & Stack",
   "VLANs",
   "TCP/IP",
+  "Routing & Switching",
+  "Firewalls",
+  "Wireless Networking",
+  "Telephony Systems",
+  "Hardware Diagnostics",
+  "Circuit Turn-Up Support",
+  "Infrastructure Support",
+  "Technical Documentation",
+  "Wireshark",
+  "Nmap",
+  "VMware",
   "Python",
   "Flask",
   "Google Apps Script",
   "SQL",
-  "Wireshark",
-  "Nmap",
-  "VMware",
-  "Technical Documentation",
-  "Data Center Operations",
-  "Automation",
 ];
 
 export default function ResumeWebsite() {
@@ -120,13 +144,14 @@ export default function ResumeWebsite() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#050816]/65 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-cyan-300">
+            <h1 className="text-2xl font-bold tracking-wide text-white md:text-4xl">
               Hassan Ahmed
-            </p>
-            <p className="text-xs text-white/60">
+            </h1>
+            <p className="mt-1 text-sm text-white/60 md:text-base">
               Infrastructure • Networking • Automation
             </p>
           </div>
+
           <div className="hidden gap-3 md:flex">
             <a
               href="mailto:haahmed571@gmail.com"
@@ -156,6 +181,7 @@ export default function ResumeWebsite() {
               >
                 Resume Portfolio
               </motion.p>
+
               <motion.h1
                 variants={fadeUp}
                 className="max-w-4xl text-5xl font-semibold leading-tight sm:text-6xl lg:text-7xl"
@@ -167,15 +193,14 @@ export default function ResumeWebsite() {
                 </span>
                 behind cloud-scale systems.
               </motion.h1>
+
               <motion.p
                 variants={fadeUp}
                 className="mt-6 max-w-2xl text-lg leading-8 text-white/70"
               >
-                AWS Network Deployment Technician with a background in
-                infrastructure support, telecom systems, field engineering, and
-                automation. I work where hands-on execution meets network
-                fundamentals.
+                AWS Network Deployment Technician, working as a TEKsystems contractor supporting Amazon Web Services, with a background in infrastructure support, telecom systems, field engineering, and automation. I work where hands-on execution meets network fundamentals across Layer 1–3 environments.
               </motion.p>
+
               <motion.div
                 variants={fadeUp}
                 className="mt-8 flex flex-wrap gap-4"
@@ -193,6 +218,7 @@ export default function ResumeWebsite() {
                   Explore Projects
                 </a>
               </motion.div>
+
               <motion.div
                 variants={fadeUp}
                 className="mt-8 flex flex-wrap gap-4 text-sm text-white/65"
@@ -308,6 +334,9 @@ export default function ResumeWebsite() {
                     Bachelor of Applied Science, Cyber Security
                   </p>
                   <p className="text-sm text-white/60">December 2023</p>
+                  <p className="mt-2 text-sm text-white/50">
+                    Concentration in Cyber Security and Data Analysis
+                  </p>
                 </div>
                 <div className="rounded-2xl border border-white/10 bg-black/20 p-5">
                   <div className="mb-3 flex items-center gap-3">
@@ -320,6 +349,9 @@ export default function ResumeWebsite() {
                     Associate of Applied Science, Cyber Security
                   </p>
                   <p className="text-sm text-white/60">August 2021</p>
+                  <p className="mt-2 text-sm text-white/50">
+                    Concentration in Cyber Security and Network Configuration
+                  </p>
                 </div>
               </div>
             </motion.div>
@@ -342,7 +374,7 @@ export default function ResumeWebsite() {
             <h2 className="text-3xl font-semibold">Career timeline</h2>
           </motion.div>
 
-          <div className="mt-10 space-y-6">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {experience.map((job) => {
               const Icon = job.icon;
               return (
@@ -354,30 +386,30 @@ export default function ResumeWebsite() {
                   variants={fadeUp}
                   className="group rounded-[2rem] border border-white/10 bg-white/5 p-7 backdrop-blur-xl transition hover:border-cyan-400/30 hover:bg-white/[0.07]"
                 >
-                  <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
-                    <div>
-                      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
-                        <Icon className="h-6 w-6 text-cyan-300" />
-                      </div>
-                      <p className="text-sm uppercase tracking-[0.25em] text-white/45">
-                        {job.period}
-                      </p>
-                      <h3 className="mt-3 text-xl font-semibold">
-                        {job.title}
-                      </h3>
-                      <p className="mt-1 text-white/65">{job.company}</p>
+                  <div>
+                    <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-black/20">
+                      <Icon className="h-6 w-6 text-cyan-300" />
                     </div>
-                    <ul className="space-y-3 pt-1 text-white/72">
-                      {job.points.map((point) => (
-                        <li
-                          key={point}
-                          className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3"
-                        >
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
+                    <p className="text-sm uppercase tracking-[0.25em] text-white/45">
+                      {job.period}
+                    </p>
+                    <h3 className="mt-3 text-xl font-semibold">{job.title}</h3>
+                    <p className="mt-1 text-white/65">
+                      {job.company}
+                      {job.location ? ` · ${job.location}` : ""}
+                    </p>
                   </div>
+
+                  <ul className="mt-5 space-y-3 pt-1 text-white/72">
+                    {job.points.map((point) => (
+                      <li
+                        key={point}
+                        className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3"
+                      >
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                 </motion.div>
               );
             })}
@@ -430,7 +462,10 @@ export default function ResumeWebsite() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <section
+          id="skills"
+          className="mx-auto max-w-7xl px-6 py-16 lg:px-10"
+        >
           <motion.div
             initial="hidden"
             whileInView="show"
@@ -442,18 +477,22 @@ export default function ResumeWebsite() {
               Core Skills
             </p>
             <h2 className="text-3xl font-semibold">Technical toolkit</h2>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <p className="mt-3 max-w-3xl text-white/60">
+              Networking, infrastructure support, deployment operations, troubleshooting, documentation, and technical administration across physical and logical environments.
+            </p>
+
+            <div className="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
               {skills.map((skill) => (
-                <motion.span
+                <motion.div
                   key={skill}
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.1 }}
                   variants={fadeUp}
-                  className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm text-white/75"
+                  className="rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-sm text-white/75"
                 >
                   {skill}
-                </motion.span>
+                </motion.div>
               ))}
             </div>
           </motion.div>
