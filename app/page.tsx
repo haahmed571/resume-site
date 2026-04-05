@@ -344,7 +344,7 @@ export default function ResumeWebsite() {
                   <div className="mb-3 flex items-center gap-3">
                     <GraduationCap className="h-5 w-5 text-violet-300" />
                     <h3 className="text-lg font-medium">
-                      George Mason University
+                      Northern Virginia Community College (NVCC)
                     </h3>
                   </div>
                   <p className="font-medium">
