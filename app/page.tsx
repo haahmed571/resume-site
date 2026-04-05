@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Server, Network, Shield, ArrowDown, Briefcase, GraduationCap, Cpu, Wrench } from "lucide-react";
 
