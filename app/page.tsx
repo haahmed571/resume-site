@@ -143,36 +143,44 @@ export default function ResumeWebsite() {
         <div className="absolute left-1/2 top-0 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
       </div>
 
-      <header className="sticky top-0 z-40 border-b border-white/10 bg-[#050816]/65 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-          <div>
-            <h1 className="text-2xl font-bold tracking-wide text-white md:text-4xl">
-              Hassan Ahmed
-            </h1>
-            <p className="mt-1 text-sm text-white/60 md:text-base">
-              Infrastructure • Networking • Automation
-            </p>
-          </div>
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050816]/70 backdrop-blur-xl">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
 
-          <div className="hidden gap-3 md:flex">
-            <a
-              href="mailto:haahmed571@gmail.com"
-              className="rounded-2xl border border-white/10 bg-white/5 px-4 py-2 text-sm hover:bg-white/10"
-            >
-              Email
-            </a>
-            <a
-              href="https://www.linkedin.com/in/hassan-ahmed-ba01b4200/"
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-2xl border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm hover:bg-cyan-400/20"
-            >
-              LinkedIn
-            </a>
-          </div>
-        </div>
-      </header>
+    {/* LEFT: NAME */}
+    <div>
+      <h1 className="text-lg md:text-xl font-semibold tracking-wide">
+        Hassan Ahmed
+      </h1>
+    </div>
 
+    {/* CENTER: NAV LINKS */}
+    <nav className="hidden md:flex items-center gap-6 text-sm text-white/70">
+      <a href="#about" className="hover:text-white transition">About</a>
+      <a href="#experience" className="hover:text-white transition">Experience</a>
+      <a href="#projects" className="hover:text-white transition">Projects</a>
+      <a href="#skills" className="hover:text-white transition">Skills</a>
+    </nav>
+
+    {/* RIGHT: ACTIONS */}
+    <div className="flex items-center gap-3">
+      <a
+        href="/resume.pdf"
+        target="_blank"
+        className="hidden md:inline-flex rounded-xl border border-white/10 px-4 py-2 text-sm hover:bg-white/10 transition"
+      >
+        Resume
+      </a>
+
+      <a
+        href="mailto:haahmed571@gmail.com"
+        className="rounded-xl bg-white px-4 py-2 text-sm font-medium text-black hover:scale-[1.03] transition"
+      >
+        Contact
+      </a>
+    </div>
+
+  </div>
+</header>
       <main>
       <section className="relative mx-auto flex min-h-[92vh] max-w-7xl items-center px-6 py-16 lg:px-10">
   <div className="grid w-full items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
