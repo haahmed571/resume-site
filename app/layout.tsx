@@ -1,10 +1,7 @@
+"use client";
+
 import "./globals.css";
 import { Header, Background, Footer } from "@/components/shared";
-
-export const metadata = {
-  title: "Hassan Ahmed",
-  description: "AWS Network Deployment Technician Portfolio",
-};
 
 export default function RootLayout({
   children,
