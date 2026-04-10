@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header, Background, Footer, fadeUp, skills } from "@/components/shared";
+import { fadeUp, skills } from "@/components/shared";
 
 const skillCategories = [
   {
@@ -56,10 +56,7 @@ const skillCategories = [
 
 export default function SkillsPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#050816] text-white selection:bg-cyan-400/30">
-      <Background />
-      <Header />
-
+    <div className="min-h-screen overflow-x-hidden">
       <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <motion.div
           initial="hidden"
@@ -141,8 +138,6 @@ export default function SkillsPage() {
           </div>
         </motion.div>
       </main>
-
-      <Footer />
     </div>
   );
 }
