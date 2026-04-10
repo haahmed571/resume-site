@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header, Background, Footer, fadeUp, Mail, Linkedin, Github } from "@/components/shared";
+import { fadeUp, Mail, Linkedin, Github } from "@/components/shared";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#050816] text-white selection:bg-cyan-400/30">
-      <Background />
-      <Header />
-
+    <div className="min-h-screen overflow-x-hidden">
       <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <motion.div
           initial="hidden"
@@ -160,8 +157,6 @@ export default function ContactPage() {
           </a>
         </motion.div>
       </main>
-
-      <Footer />
     </div>
   );
 }

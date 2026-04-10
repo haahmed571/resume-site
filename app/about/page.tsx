@@ -1,14 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Header, Background, Footer, fadeUp, GraduationCap } from "@/components/shared";
+import { fadeUp, GraduationCap } from "@/components/shared";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen overflow-x-hidden bg-[#050816] text-white selection:bg-cyan-400/30">
-      <Background />
-      <Header />
-
+    <div className="min-h-screen overflow-x-hidden">
       <main className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <motion.div
           initial="hidden"
@@ -128,8 +125,6 @@ export default function AboutPage() {
           </div>
         </motion.div>
       </main>
-
-      <Footer />
     </div>
   );
 }
