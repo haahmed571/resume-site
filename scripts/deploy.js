@@ -16,7 +16,7 @@ try {
   // Push to the current branch
   execSync('git push origin HEAD', { stdio: 'inherit' });
   
-  console.log('✓ Changes pushed to GitHub!');
+  console.log('\n✓ Changes pushed to GitHub!');
   console.log('✓ Vercel deployment triggered automatically');
 } catch (error) {
   console.error('Deployment failed:', error.message);
